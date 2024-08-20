@@ -7,7 +7,7 @@
  * Install SpoofDPI and auto-run it on login
  * Auto-mount windows partition if any
  * Packages: `sudo pacman -Sy cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 ardour alsa-utils power-profiles-daemon`
- * AUR: `yay -Sy coppwr logiops equibop`
+ * AUR: `yay -Sy coppwr-bin logiops equibop brave-bin`
  * Setup `/etc/logid.conf`
  * For bluetooth install `bluez` and `bluez-utils` then enable with `sudo systemctl enable bluetooth.service`
 
