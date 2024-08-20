@@ -2,6 +2,8 @@
  * Install `yay` for AUR
  * Add neccesary boot flags for nvidia, e. g. `nvidia_drm.modeset=1`
  * Enable nvidia hibernate/resume/suspend daemons
+ * Install SpoofDPI and auto-run it on login
+ * Auto-mount windows partition if any
 
 # Audio
  * Use `rtcqs` to check audio performance
