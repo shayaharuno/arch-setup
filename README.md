@@ -21,6 +21,14 @@
  * For Wayland to work, add `nvidia_drm.modeset=1`
  * Fix GSP slowdowns: `nvidia.NVreg_EnableGpuFirmware=0`
  * Enable NVIDIA hibernate/resume/suspend daemons (`nvidia.NVreg_PreserveVideoMemoryAllocations=1` may also be needed)
+ * All of the above could be added to `/etc/modprobe.d/nvidia.conf` instead
+   ```
+   options nvidia NVreg_PreserveVideoMemoryAllocations=1
+   options nvidia NVreg_TemporaryFilePath=/var/tmp
+   options nvidia NVreg_EnableGpuFirmware=0
+   options nvidia_drm modeset=1
+   options nvidia_drm fbdev=1
+   ```
  * `GRUB_TERMINAL_OUTPUT=console` fixes slow GRUB
 
 # Steam
