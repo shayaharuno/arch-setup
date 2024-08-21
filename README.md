@@ -33,7 +33,8 @@
  * `GRUB_TERMINAL_OUTPUT=console` fixes slow GRUB
 
 # Steam
- * Move `compatdata` to Linux fs and symlink it with NTFS library
+ * It's possible to use NTFS partition for game library
+ * In that case move `compatdata` to Linux fs and symlink it with NTFS library
 
 # Fractional Scaling
   * `QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor`
