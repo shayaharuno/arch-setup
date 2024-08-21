@@ -29,6 +29,7 @@
    options nvidia_drm modeset=1
    options nvidia_drm fbdev=1
    ```
+ * Add `nvidia-booster.service` as a temporary mitigation of GSP issue
  * `GRUB_TERMINAL_OUTPUT=console` fixes slow GRUB
 
 # Steam
