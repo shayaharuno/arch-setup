@@ -1,6 +1,6 @@
 # General
- * Enable multilib repo
- * Install GCM
+ * Enable `multilib` repo
+ * Install Git Credential Manager
  * Install `yay` for AUR
    * Edit `/etc/makepkg.conf` to disable debug packages
  * Install SpoofDPI and auto-run it on login
@@ -24,8 +24,11 @@
  * `GRUB_TERMINAL_OUTPUT=console` fixes slow GRUB
 
 # Steam
- * Add `STEAM_FORCE_DESKTOPUI_SCALING=1.5` to `/etc/environment` to force UI scale
  * Move `compatdata` to Linux fs and symlink it with NTFS library
+
+# Fractional Scaling
+  * `QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor`
+  * `STEAM_FORCE_DESKTOPUI_SCALING=1.5`
 
 # 86Box
  * Install Steam, then install `lib32-libxi`, `lib32-pipewire` and `lib32-fuse3` to run x86 builds 
