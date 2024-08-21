@@ -2,14 +2,26 @@
  * Enable multilib repo
  * Install GCM
  * Install `yay` for AUR
- * Add neccesary boot flags for NVIDIA, e. g. `nvidia_drm.modeset=1`
- * Enable NVIDIA hibernate/resume/suspend daemons
+   * Edit `/etc/makepkg.conf` to disable debug packages
  * Install SpoofDPI and auto-run it on login
  * Auto-mount windows partition if any
- * Packages: `sudo pacman -Sy cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 ardour alsa-utils power-profiles-daemon`
- * AUR: `yay -Sy coppwr-bin logiops equibop brave-bin`
- * Setup `/etc/logid.conf`
+ * Packages: `sudo pacman -Sy spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 ardour alsa-utils power-profiles-daemon`
+ * AUR: `yay -Sy coppwr-bin equibop brave-bin`
+ * Configure `MX Master 3S` `/etc/logid.conf`
  * For bluetooth install `bluez` and `bluez-utils` then enable with `sudo systemctl enable bluetooth.service`
+
+# MX Master 3S
+ * AUR: `yay -Sy logiops`
+ * `sudo systemctl enable logid`
+ * Copy `logid.conf` to `/etc/logid.conf`
+
+# NVIDIA (Discrete Mode)
+ * `dkms` package is OK for any kernel (long rebuild times though)
+ * Regular `nvidia` package is specific to `linux` kernel (regular Arch Kernel)
+ * For Wayland to work, add `nvidia_drm.modeset=1`
+ * Fix GSP slowdowns: `nvidia.NVreg_EnableGpuFirmware=0`
+ * Enable NVIDIA hibernate/resume/suspend daemons (`nvidia.NVreg_PreserveVideoMemoryAllocations=1` may also be needed)
+ * `GRUB_TERMINAL_OUTPUT=console` fixes slow GRUB
 
 # Steam
  * Add `STEAM_FORCE_DESKTOPUI_SCALING=1.5` to `/etc/environment` to force UI scale
