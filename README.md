@@ -19,16 +19,14 @@
 
 # MX Master 3S
  * AUR: `yay -Sy logiops`
- * `sudo systemctl enable logid`
  * Copy `logid.conf` to `/etc/logid.conf`
+ * `sudo systemctl enable logid`
 
 # NVIDIA (Discrete Mode)
- * `nvidia-dkms` package is OK for any kernel (long rebuild times though)
- * `nvidia-open` and `nvidia-open-dkms` may break suspend
- * Regular `nvidia` package is specific to `linux` kernel, as `nvidia-lts` is to `linux-lts`
+ * Best option is `nvidia-open-dkms` package (open source kernel module as recommended by NVIDIA and works with any kernel)
  * For Wayland to work, add `nvidia_drm.modeset=1`
- * Disable GSP until fixed: `nvidia.NVreg_EnableGpuFirmware=0`
- * Enable NVIDIA hibernate/resume/suspend daemons (`nvidia.NVreg_PreserveVideoMemoryAllocations=1` may also be needed)
+ * Disable GSP until fixed: `nvidia.NVreg_EnableGpuFirmware=0` (only works with closed source kernel module)
+ * Enable NVIDIA hibernate/resume/suspend daemons and add `nvidia.NVreg_PreserveVideoMemoryAllocations=1`
  * All of the above may be added to `/etc/modprobe.d/nvidia.conf`
    ```
    options nvidia NVreg_PreserveVideoMemoryAllocations=1
