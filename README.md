@@ -5,9 +5,8 @@
    * Edit `/etc/makepkg.conf` to disable debug packages
  * Install SpoofDPI and auto-run it on login
  * Auto-mount windows partition if any
- * Packages: `sudo pacman -Sy spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 ardour alsa-utils power-profiles-daemon`
+ * Packages: `sudo pacman -Sy fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 ardour alsa-utils power-profiles-daemon`
  * AUR: `yay -Sy coppwr-bin equibop brave-bin`
- * Configure `MX Master 3S` `/etc/logid.conf`
  * For bluetooth install `bluez` and `bluez-utils` then enable with `sudo systemctl enable bluetooth.service`
 
 # Environment Variables
