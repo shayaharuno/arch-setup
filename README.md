@@ -10,6 +10,14 @@
  * Configure `MX Master 3S` `/etc/logid.conf`
  * For bluetooth install `bluez` and `bluez-utils` then enable with `sudo systemctl enable bluetooth.service`
 
+# Environment Variables
+ * Put user-specific enironment variables to `~/.bash_profile`
+ * Fix fractional scaling:
+   ```
+   QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor
+   STEAM_FORCE_DESKTOPUI_SCALING=1.5
+   ```
+
 # MX Master 3S
  * AUR: `yay -Sy logiops`
  * `sudo systemctl enable logid`
@@ -17,11 +25,11 @@
 
 # NVIDIA (Discrete Mode)
  * `dkms` package is OK for any kernel (long rebuild times though)
- * Regular `nvidia` package is specific to `linux` kernel (regular Arch Kernel)
+ * Regular `nvidia` package is specific to `linux` kernel, as `nvidia-lts` is to `linux-lts`
  * For Wayland to work, add `nvidia_drm.modeset=1`
- * Fix GSP slowdowns: `nvidia.NVreg_EnableGpuFirmware=0`
+ * Disable GSP until fixed: `nvidia.NVreg_EnableGpuFirmware=0`
  * Enable NVIDIA hibernate/resume/suspend daemons (`nvidia.NVreg_PreserveVideoMemoryAllocations=1` may also be needed)
- * All of the above could be added to `/etc/modprobe.d/nvidia.conf` instead
+ * All of the above may be added to `/etc/modprobe.d/nvidia.conf`
    ```
    options nvidia NVreg_PreserveVideoMemoryAllocations=1
    options nvidia NVreg_TemporaryFilePath=/var/tmp
@@ -30,15 +38,11 @@
    options nvidia_drm fbdev=1
    ```
  * Add `nvidia-booster.service` as a temporary mitigation of GSP issue
- * `GRUB_TERMINAL_OUTPUT=console` fixes slow GRUB
+ * Uncommenting `GRUB_TERMINAL_OUTPUT=console` in `/etc/default/grub` fixes slow GRUB
 
 # Steam
  * It's possible to use NTFS partition for game library
  * In that case move `compatdata` to Linux fs and symlink it with NTFS library
-
-# Fractional Scaling
-  * `QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor`
-  * `STEAM_FORCE_DESKTOPUI_SCALING=1.5`
 
 # 86Box
  * Install Steam, then install `lib32-libxi`, `lib32-pipewire` and `lib32-fuse3` to run x86 builds 
