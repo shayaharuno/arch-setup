@@ -23,7 +23,8 @@
  * `sudo systemctl enable logid`
 
 # NVIDIA (Discrete Mode)
- * Best option is `nvidia-open-dkms` package (open source kernel module as recommended by NVIDIA and works with any kernel)
+ * Best option is `nvidia-dkms` package (works with any kernel)
+ * `nvidia-open-dkms` currently has performance issues
  * For Wayland to work, add `nvidia_drm.modeset=1`
  * Disable GSP until fixed: `nvidia.NVreg_EnableGpuFirmware=0` (only works with closed source kernel module)
  * Enable NVIDIA hibernate/resume/suspend daemons and add `nvidia.NVreg_PreserveVideoMemoryAllocations=1`
