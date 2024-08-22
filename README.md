@@ -23,7 +23,8 @@
  * Copy `logid.conf` to `/etc/logid.conf`
 
 # NVIDIA (Discrete Mode)
- * `dkms` package is OK for any kernel (long rebuild times though)
+ * `nvidia-dkms` package is OK for any kernel (long rebuild times though)
+ * `nvidia-open` and `nvidia-open-dkms` may break suspend
  * Regular `nvidia` package is specific to `linux` kernel, as `nvidia-lts` is to `linux-lts`
  * For Wayland to work, add `nvidia_drm.modeset=1`
  * Disable GSP until fixed: `nvidia.NVreg_EnableGpuFirmware=0`
