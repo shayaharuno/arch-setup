@@ -24,11 +24,12 @@
 
 # Intel Graphics
  * Vulkan driver: `sudo pacman -S vulkan-intel lib32-vulkan-intel`
- * Encoding/decoding: `sudo pacman -S intel-media-driver intel-media-sdk libva-intel-driver onevpl-intel-gpu libva-utils`
+ * Video acceleration: `sudo pacman -S intel-media-driver intel-media-sdk libva-intel-driver onevpl-intel-gpu libva-utils`
 
 # NVIDIA Graphics
  * Best option is `nvidia-dkms` package (works with any kernel)
  * `nvidia-open-dkms` currently has performance issues
+ * Video acceleration: `sudo pacman -S libvdpau libva-nvidia-driver`
  * For Wayland to work, add `nvidia_drm.modeset=1`
  * Disable GSP until fixed: `nvidia.NVreg_EnableGpuFirmware=0` (only works with closed source kernel module)
  * Enable NVIDIA hibernate/resume/suspend daemons and add `nvidia.NVreg_PreserveVideoMemoryAllocations=1`
