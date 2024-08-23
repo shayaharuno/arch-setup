@@ -22,7 +22,10 @@
  * Copy `logid.conf` to `/etc/logid.conf`
  * `sudo systemctl enable logid`
 
-# NVIDIA (Discrete Mode)
+# Intel
+ * Install `intel-media-driver` and `libva-intel-driver`
+
+# NVIDIA
  * Best option is `nvidia-dkms` package (works with any kernel)
  * `nvidia-open-dkms` currently has performance issues
  * For Wayland to work, add `nvidia_drm.modeset=1`
