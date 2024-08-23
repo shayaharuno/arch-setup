@@ -5,8 +5,8 @@
    * Edit `/etc/makepkg.conf` to disable debug packages
  * Install SpoofDPI and auto-run it on login
  * Auto-mount windows partition if any
- * Packages: `sudo pacman -Sy fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 ardour alsa-utils power-profiles-daemon`
- * AUR: `yay -Sy coppwr-bin equibop brave-bin`
+ * Packages: `sudo pacman -S fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 ardour alsa-utils power-profiles-daemon`
+ * AUR: `yay -S coppwr-bin equibop brave-bin`
  * For bluetooth install `bluez` and `bluez-utils` then enable with `sudo systemctl enable bluetooth.service`
 
 # Environment Variables
@@ -22,10 +22,11 @@
  * Copy `logid.conf` to `/etc/logid.conf`
  * `sudo systemctl enable logid`
 
-# Intel
- * Install `intel-media-driver` and `libva-intel-driver`
+# Intel Graphics
+ * Vulkan driver: `sudo pacman -S vulkan-intel lib32-vulkan-intel`
+ * Encoding/decoding: `sudo pacman -S intel-media-driver intel-media-sdk libva-intel-driver onevpl-intel-gpu libva-utils`
 
-# NVIDIA
+# NVIDIA Graphics
  * Best option is `nvidia-dkms` package (works with any kernel)
  * `nvidia-open-dkms` currently has performance issues
  * For Wayland to work, add `nvidia_drm.modeset=1`
