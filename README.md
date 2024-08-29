@@ -1,12 +1,12 @@
 # General
  * Enable `multilib` repo
- * Install Git Credential Manager
  * Install `yay` for AUR
    * Edit `/etc/makepkg.conf` to disable debug packages
+ * Packages: `yay -S --needed partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils power-profiles-daemon alacritty neovim`
  * Install SpoofDPI and auto-run it on login
  * Auto-mount windows partition if any
- * Packages: `sudo pacman -S ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils power-profiles-daemon`
- * AUR: `yay -S coppwr-bin equibop brave-bin`
+ * Install Git Credential Manager
+ * Clone Neovim and Alacritty configs
  * For bluetooth install `bluez` and `bluez-utils` then enable with `sudo systemctl enable bluetooth.service`
 
 # Environment Variables
@@ -23,13 +23,13 @@
  * `sudo systemctl enable logid`
 
 # Intel Graphics
- * Vulkan driver: `sudo pacman -S vulkan-intel lib32-vulkan-intel`
- * Video acceleration: `sudo pacman -S intel-media-driver intel-media-sdk libva-intel-driver onevpl-intel-gpu libva-utils`
+ * Vulkan driver: `yay -S vulkan-intel lib32-vulkan-intel`
+ * Video acceleration: `yay -S intel-media-driver intel-media-sdk libva-intel-driver onevpl-intel-gpu libva-utils`
 
 # NVIDIA Graphics
  * Best option is `nvidia-dkms` package (works with any kernel)
  * `nvidia-open-dkms` currently has performance issues
- * Video acceleration: `sudo pacman -S libvdpau libva-nvidia-driver`
+ * Video acceleration: `yay -S libvdpau libva-nvidia-driver`
  * For Wayland to work, add `nvidia_drm.modeset=1`
  * Disable GSP until fixed: `nvidia.NVreg_EnableGpuFirmware=0` (only works with closed source kernel module)
  * Enable NVIDIA hibernate/resume/suspend daemons and add `nvidia.NVreg_PreserveVideoMemoryAllocations=1`
@@ -53,7 +53,7 @@
 
 # Audio
  * Use `rtcqs` to check audio performance
- * Install audio DAW and plugins: `sudo pacman -S ardour zam-plugins-vst3 surge-xt-vst3 ot-urchin-vst3 ot-cryptid-vst3 ob-xd-vst3 js80p jc303-vst3 dragonfly-reverb-vst3 cardinal-vst3 dexed-vst3`
+ * Install audio DAW and plugins: `yay -S ardour zam-plugins-vst3 surge-xt-vst3 ot-urchin-vst3 ot-cryptid-vst3 ob-xd-vst3 js80p jc303-vst3 dragonfly-reverb-vst3 cardinal-vst3 dexed-vst3`
  * Reaper setup: edit `ui_scale=*` in `~/.config/REAPER/reaper.ini` and manually add `/usr/lib/vst3/` to VST path
 
 # RME Babyface Pro
