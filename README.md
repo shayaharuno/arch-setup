@@ -2,7 +2,7 @@
  * Enable `multilib` repo
  * Install `yay` for AUR
    * Edit `/etc/makepkg.conf` to disable debug packages
- * Packages: `yay -S --needed spoof-dpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils power-profiles-daemon alacritty neovim`
+ * Packages: `yay -S --needed spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils power-profiles-daemon alacritty neovim`
  * Make SpoofDPI autorun on login
  * Auto-mount windows partition if any
  * Install Git Credential Manager
