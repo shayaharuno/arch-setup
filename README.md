@@ -5,7 +5,7 @@
    * Edit `/etc/makepkg.conf` to disable debug packages
  * Install SpoofDPI and auto-run it on login
  * Auto-mount windows partition if any
- * Packages: `sudo pacman -S ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 ardour surge-xt-vst3 alsa-utils power-profiles-daemon`
+ * Packages: `sudo pacman -S ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils power-profiles-daemon`
  * AUR: `yay -S coppwr-bin equibop brave-bin`
  * For bluetooth install `bluez` and `bluez-utils` then enable with `sudo systemctl enable bluetooth.service`
 
@@ -53,6 +53,8 @@
 
 # Audio
  * Use `rtcqs` to check audio performance
+ * Install audio DAW and plugins: `sudo pacman -S ardour zam-plugins-vst3 surge-xt-vst3 ot-urchin-vst3 ot-cryptid-vst3 ob-xd-vst3 js80p jc303-vst3 dragonfly-reverb-vst3 cardinal-vst3 dexed-vst3`
+ * Reaper setup: edit `ui_scale=*` in `~/.config/REAPER/reaper.ini` and manually add `/usr/lib/vst3/` to VST path
 
 # RME Babyface Pro
  * Use Pro Audio profile
