@@ -62,5 +62,5 @@
  * Optionally add `IN3`/`IN4` monitoring
 
 # Debugging
- * Install `debuginfod`: `sudo pacman -S debuginfod`
+ * Install `debuginfod`: `yay -S debuginfod`
  * Add `set debuginfod enabled on` to `~/.gdbinit`
