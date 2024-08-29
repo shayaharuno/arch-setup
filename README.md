@@ -17,11 +17,6 @@
    STEAM_FORCE_DESKTOPUI_SCALING=1.5
    ```
 
-# MX Master 3S
- * AUR: `yay -Sy logiops`
- * Copy `logid.conf` to `/etc/logid.conf`
- * `sudo systemctl enable logid`
-
 # Intel Graphics
  * Vulkan driver: `yay -S vulkan-intel lib32-vulkan-intel`
  * Video acceleration: `yay -S intel-media-driver intel-media-sdk libva-intel-driver onevpl-intel-gpu libva-utils`
@@ -56,11 +51,20 @@
  * Install audio DAW and plugins: `yay -S ardour zam-plugins-vst3 surge-xt-vst3 ot-urchin-vst3 ot-cryptid-vst3 ob-xd-vst3 js80p jc303-vst3 dragonfly-reverb-vst3 cardinal-vst3 dexed-vst3`
  * Reaper setup: edit `ui_scale=*` in `~/.config/REAPER/reaper.ini` and manually add `/usr/lib/vst3/` to VST path
 
+# Development
+ * Extract Vulkan SDK to `~/Tools/VulkanSDK/1.x.xxx` and symlink it to `current`, then add `source ~/Tools/VulkanSDK/current/setup-env.sh` to `~/.bash_profile`
+ * NVIDIA Nsight works well under sudo
+
+# Advanced Debugging
+ * Install `debuginfod`: `yay -S debuginfod`
+ * Add `set debuginfod enabled on` to `~/.gdbinit`
+
+# MX Master 3S
+ * AUR: `yay -Sy logiops`
+ * Copy `logid.conf` to `/etc/logid.conf`
+ * `sudo systemctl enable logid`
+
 # RME Babyface Pro
  * Use Pro Audio profile
  * Set `PCM-AN1-AN1`, `PCM-AN2-AN2`, `PCM-AN1-PH3` and `PCM-AN2-PH4` in `alsamixer` to 100 (fixes audio after sleep)
  * Optionally add `IN3`/`IN4` monitoring
-
-# Debugging
- * Install `debuginfod`: `yay -S debuginfod`
- * Add `set debuginfod enabled on` to `~/.gdbinit`
