@@ -2,7 +2,7 @@
  * Enable `multilib` repo
  * Install `yay` for AUR
    * Edit `/etc/makepkg.conf` to disable debug packages
- * Packages: `yay -S --needed spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils power-profiles-daemon alacritty neovim`
+ * Packages: `yay -S --needed kdialog spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils power-profiles-daemon alacritty neovim`
  * Make SpoofDPI autorun on login and add `--proxy-server=http://127.0.0.1:8085` to Chromium-based browsers
  * Auto-mount windows partition if any
  * Install Git Credential Manager
@@ -38,6 +38,11 @@
    ```
  * Add `nvidia-booster.service` as a temporary mitigation of GSP issue
  * Uncommenting `GRUB_TERMINAL_OUTPUT=console` in `/etc/default/grub` fixes slow GRUB
+
+# Wine
+ * Install: `yay -S wine wine-mono winetricks`
+ * Install all fonts through `winetricks`
+ * Guitar Pro 8 confirmed working
 
 # Steam
  * It's possible to use NTFS partition for game library
