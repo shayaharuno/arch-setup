@@ -3,7 +3,7 @@
  * Install `yay` for AUR
    * Edit `/etc/makepkg.conf` to disable debug packages
  * Packages: `yay -S --needed spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils power-profiles-daemon alacritty neovim`
- * Make SpoofDPI autorun on login
+ * Make SpoofDPI autorun on login and add `--proxy-server=http://127.0.0.1:8085` to Chromium-based browsers
  * Auto-mount windows partition if any
  * Install Git Credential Manager
  * Clone Neovim and Alacritty configs
