@@ -48,7 +48,7 @@
 
 # Audio
  * Use `rtcqs` to check audio performance
- * Install audio DAW and plugins: `yay -S ardour zam-plugins-lv2 surge-xt-clap ot-urchin-clap ot-cryptid-clap ob-xd-lv2 js80p jc303-clap dragonfly-reverb-clap cardinal-clap dexed-clap`
+ * Install audio DAW and plugins: `yay -S sws reaper reapack zam-plugins-clap surge-xt-clap ot-urchin-clap ot-cryptid-clap ob-xd-lv2 js80p jc303-clap dragonfly-reverb-clap cardinal-clap dexed-clap`
  * Reaper setup: edit `ui_scale=*` in `~/.config/REAPER/reaper.ini` and manually add `/usr/lib/vst3/` to VST path
 
 # Development
