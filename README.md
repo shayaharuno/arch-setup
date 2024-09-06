@@ -65,7 +65,7 @@
  * Add `set debuginfod enabled on` to `~/.gdbinit`
 
 # MX Master 3S
- * AUR: `yay -Sy logiops`
+ * AUR: `yay -S logiops`
  * Copy `logid.conf` to `/etc/logid.conf`
  * `sudo systemctl enable logid`
 
