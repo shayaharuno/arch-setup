@@ -2,7 +2,8 @@
  * Enable `multilib` repo
  * Install `yay` for AUR
    * Edit `/etc/makepkg.conf` to disable debug packages
- * Packages: `yay -S --needed kdialog spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils power-profiles-daemon alacritty neovim okular kdegraphics-mobipocket unrar ripgrep fd`
+ * Packages: `yay -S --needed kdialog spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils tuned tuned-ppd alacritty neovim okular kdegraphics-mobipocket unrar ripgrep fd`
+ * Enable `tuned` with `sudo systemctl enable tuned` and `sudo systemctl enable tuned-ppd`
  * Make SpoofDPI autorun on login and add `--proxy-server=http://127.0.0.1:8085` to Chromium-based browsers
  * Auto-mount windows partition if any
  * Install Git Credential Manager
@@ -65,6 +66,7 @@
  * Add `set debuginfod enabled on` to `~/.gdbinit`
 
 # MX Master 3S
+ * This seems essential as this mouse prevents PC from sleeping properly unless the driver is installed
  * AUR: `yay -S logiops`
  * Copy `logid.conf` to `/etc/logid.conf`
  * `sudo systemctl enable logid`
