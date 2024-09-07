@@ -61,7 +61,7 @@
  * Extract Vulkan SDK to `~/Tools/VulkanSDK/1.x.xxx` and symlink it to `current`, then add `source ~/Tools/VulkanSDK/current/setup-env.sh` to `~/.bash_profile`
  * NVIDIA Nsight works well under sudo
 
-# Advanced Debugging
+# Advanced Debugging With GDB
  * Install `debuginfod`: `yay -S debuginfod`
  * Add `set debuginfod enabled on` to `~/.gdbinit`
 
