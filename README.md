@@ -49,9 +49,6 @@
  * It's possible to use NTFS partition for game library
  * In that case move `compatdata` to Linux fs and symlink it with NTFS library
 
-# 86Box
- * Install Steam, then install `lib32-libxi`, `lib32-pipewire` and `lib32-fuse3` to run x86 builds 
-
 # Audio
  * Use `rtcqs` to check audio performance
  * Install audio DAW and plugins: `yay -S sws reaper reapack lsp-plugins-clap zam-plugins-clap surge-xt-clap ot-urchin-clap ot-cryptid-clap ob-xd-lv2 js80p jc303-clap dragonfly-reverb-clap cardinal-clap dexed-clap`
