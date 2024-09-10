@@ -14,8 +14,8 @@
  * Put user-specific enironment variables to `~/.bash_profile`
  * Fix fractional scaling:
    ```
-   QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor
-   STEAM_FORCE_DESKTOPUI_SCALING=1.5
+   export QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor
+   export STEAM_FORCE_DESKTOPUI_SCALING=1.5
    ```
 
 # Intel Graphics
