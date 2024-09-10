@@ -2,13 +2,13 @@
  * Enable `multilib` repo
  * Install `yay` for AUR
    * Edit `/etc/makepkg.conf` to disable debug packages
- * Packages: `yay -S --needed kdialog spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils tuned tuned-ppd alacritty neovim okular kdegraphics-mobipocket unrar ripgrep fd`
+ * Packages: `yay -S --needed kdialog spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils tuned tuned-ppd alacritty neovim okular kdegraphics-mobipocket unrar ripgrep fd bluez bluez-utils`
  * Enable `tuned` with `sudo systemctl enable tuned` and `sudo systemctl enable tuned-ppd`
+ * Enable Bluetooth with `sudo systemctl enable bluetooth.service`
  * Make SpoofDPI autorun on login and add `--proxy-server=http://127.0.0.1:8085` to Chromium-based browsers
  * Auto-mount windows partition if any
  * Install Git Credential Manager
  * Clone Neovim and Alacritty configs
- * For bluetooth install `bluez` and `bluez-utils` then enable with `sudo systemctl enable bluetooth.service`
 
 # Environment Variables
  * Put user-specific enironment variables to `~/.bash_profile`
@@ -41,8 +41,8 @@
  * Uncommenting `GRUB_TERMINAL_OUTPUT=console` in `/etc/default/grub` fixes slow GRUB
 
 # Wine
- * Install: `yay -S wine-staging wine-mono winetricks`
- * Install all fonts through `winetricks`
+ * Install: `yay -S wine-staging-wow64 winetricks`
+ * Install fonts through `winetricks corefonts` or `winetricks allfonts`
  * Guitar Pro 8 confirmed working
 
 # Steam
