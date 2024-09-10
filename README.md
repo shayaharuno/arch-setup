@@ -20,7 +20,7 @@
 
 # Intel Graphics
  * Vulkan driver: `yay -S vulkan-intel lib32-vulkan-intel`
- * Video acceleration: `yay -S intel-media-driver intel-media-sdk onevpl-intel-gpu libva-utils`
+ * Video acceleration: `yay -S intel-media-driver onevpl-intel-gpu libva-utils`
 
 # NVIDIA Graphics
  * Best option is `nvidia-dkms` package (works with any kernel)
