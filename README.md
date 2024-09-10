@@ -37,11 +37,11 @@
    options nvidia_drm modeset=1
    options nvidia_drm fbdev=1
    ```
- * Add `nvidia-booster.service` as a temporary mitigation of GSP issue
+ * Add `nvidia-booster.service` to `/etc/systemd/system` as a temporary mitigation of GSP issue
  * Uncommenting `GRUB_TERMINAL_OUTPUT=console` in `/etc/default/grub` fixes slow GRUB
 
 # Wine
- * Install: `yay -S wine wine-mono winetricks`
+ * Install: `yay -S wine-staging wine-mono winetricks`
  * Install all fonts through `winetricks`
  * Guitar Pro 8 confirmed working
 
