@@ -40,7 +40,7 @@
  * Uncommenting `GRUB_TERMINAL_OUTPUT=console` in `/etc/default/grub` fixes slow GRUB
 
 # Wine
- * Install: `yay -S wine-staging-wow64 winetricks`
+ * Install: `yay -S wine wine-mono winetricks`
  * Install fonts through `winetricks corefonts` or `winetricks allfonts`
  * Guitar Pro 8 confirmed working
 
