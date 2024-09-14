@@ -34,7 +34,7 @@
  * Best option is `nvidia-dkms` package (works with any kernel)
  * `nvidia-open-dkms` currently has performance issues
  * Video acceleration: `yay -S libvdpau libva-nvidia-driver`
- * For Wayland to work, add `nvidia_drm.modeset=1`
+ * For Wayland to work: `nvidia_drm.modeset=1`
  * Disable GSP until fixed: `nvidia.NVreg_EnableGpuFirmware=0` (only works with closed source kernel module)
  * Enable NVIDIA hibernate/resume/suspend daemons and add `nvidia.NVreg_PreserveVideoMemoryAllocations=1`
  * All of the above may be added to `/etc/modprobe.d/nvidia.conf`
