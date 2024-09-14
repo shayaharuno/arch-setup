@@ -2,20 +2,20 @@
  * BTRFS: `@.snapshots` subvolume is not needed for Timeshift snapshots
 
 # General
- * Enable `multilib` repo
- * Install `yay` for AUR
-   * Edit `/etc/makepkg.conf` to disable debug packages
+ * Edit `/etc/makepkg.conf` to disable debug packages
+ * Edit `/etc/pacman.conf` to enable colors, parallel downloads and `multilib` repo
+ * Install `yay`: https://github.com/Jguer/yay
  * Packages: `yay -S --needed kdialog spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils tuned tuned-ppd alacritty neovim okular kdegraphics-mobipocket unrar ripgrep fd bluez bluez-utils realtime-privileges`
  * Enable Bluetooth with `sudo systemctl enable bluetooth.service`
- * Enable `spoofdpi` with `sudo systemctl enable spoofdpi.service` and add `--proxy-server=http://127.0.0.1:8080` to Chromium-based browsers
+ * Enable `spoofdpi` with `sudo systemctl enable --now spoofdpi.service` and add `--proxy-server=http://127.0.0.1:8080` to Chromium-based browsers
  * Auto-mount windows partition if any
- * Install Git Credential Manager
+ * Install Git Credential Manager: https://github.com/git-ecosystem/git-credential-manager
  * Clone Neovim and Alacritty configs
- * Boot flags: `quiet splash loglevel=3 systemd.show_status=auto rd.udev.log_level=3 mitigations=off threadirqs preempt=full nohz_full=all nowatchdog`
 
 # GRUB
  * Uncommenting `GRUB_TERMINAL_OUTPUT=console` in `/etc/default/grub` fixes slow GRUB
  * `GRUB_GFXMODE=1440x900x32,1280x1024x32,auto` makes text larger and fixes slowdowns
+ * Boot flags: `quiet splash loglevel=3 systemd.show_status=auto rd.udev.log_level=3 mitigations=off threadirqs preempt=full nohz_full=all nowatchdog`
  * Apply changes: `grub-mkconfig -o /boot/grub/grub.cfg`
 
 # Environment Variables
@@ -49,7 +49,7 @@
 
 # Wine
  * Install: `yay -S wine wine-mono winetricks`
- * Install fonts through `winetricks corefonts` or `winetricks allfonts`
+ * Install fonts: `winetricks corefonts` or `winetricks allfonts`
  * Guitar Pro 8 confirmed working
 
 # Steam
