@@ -1,3 +1,6 @@
+# Installation
+ * BTRFS: `@.snapshots` subvolume is not needed for Timeshift snapshots
+
 # General
  * Enable `multilib` repo
  * Install `yay` for AUR
@@ -38,6 +41,7 @@
    ```
  * Add `nvidia-booster.service` to `/etc/systemd/system` as a temporary mitigation of GSP issue
  * Uncommenting `GRUB_TERMINAL_OUTPUT=console` in `/etc/default/grub` fixes slow GRUB
+ * Alternatively, `GRUB_GFXMODE=1440x900-24,auto` makes text larger and fixes slowdowns
 
 # Wine
  * Install: `yay -S wine wine-mono winetricks`
