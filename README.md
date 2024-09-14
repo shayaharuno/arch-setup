@@ -7,10 +7,16 @@
    * Edit `/etc/makepkg.conf` to disable debug packages
  * Packages: `yay -S --needed kdialog spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils tuned tuned-ppd alacritty neovim okular kdegraphics-mobipocket unrar ripgrep fd bluez bluez-utils realtime-privileges`
  * Enable Bluetooth with `sudo systemctl enable bluetooth.service`
- * Make SpoofDPI autorun on login and add `--proxy-server=http://127.0.0.1:8085` to Chromium-based browsers
+ * Enable `spoofdpi` with `sudo systemctl enable spoofdpi.service` and add `--proxy-server=http://127.0.0.1:8080` to Chromium-based browsers
  * Auto-mount windows partition if any
  * Install Git Credential Manager
  * Clone Neovim and Alacritty configs
+ * Boot flags: `quiet splash loglevel=3 systemd.show_status=auto rd.udev.log_level=3 mitigations=off threadirqs preempt=full nohz_full=all nowatchdog`
+
+# GRUB
+ * Uncommenting `GRUB_TERMINAL_OUTPUT=console` in `/etc/default/grub` fixes slow GRUB
+ * `GRUB_GFXMODE=1440x900x32,1280x1024x32,auto` makes text larger and fixes slowdowns
+ * Apply changes: `grub-mkconfig -o /boot/grub/grub.cfg`
 
 # Environment Variables
  * Put user-specific enironment variables to `~/.bash_profile`
@@ -40,8 +46,6 @@
    options nvidia_drm fbdev=1
    ```
  * Add `nvidia-booster.service` to `/etc/systemd/system` as a temporary mitigation of GSP issue
- * Uncommenting `GRUB_TERMINAL_OUTPUT=console` in `/etc/default/grub` fixes slow GRUB
- * Alternatively, `GRUB_GFXMODE=1440x900-24,auto` makes text larger and fixes slowdowns
 
 # Wine
  * Install: `yay -S wine wine-mono winetricks`
