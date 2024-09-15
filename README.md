@@ -36,10 +36,13 @@
  * Video acceleration: `yay -S libvdpau libva-nvidia-driver`
  * Create `/etc/modprobe.d/nvidia.conf`:
    ```
-   options nvidia NVreg_PreserveVideoMemoryAllocations=1 # Suspend fix
-   options nvidia NVreg_TemporaryFilePath=/var/tmp # Suspend fix
-   options nvidia NVreg_EnableGpuFirmware=1 # Setting it to 0 might help with slowdowns, setting it to 1 only works for 2000+ cards
-   options nvidia_drm modeset=1 # Wayland fix
+   # Suspend fix
+   options nvidia NVreg_PreserveVideoMemoryAllocations=1
+   options nvidia NVreg_TemporaryFilePath=/var/tmp
+   # Setting it to 0 might help with slowdowns, setting it to 1 only works for 2000+ cards
+   options nvidia NVreg_EnableGpuFirmware=1
+   # Wayland fix
+   options nvidia_drm modeset=1
    options nvidia_drm fbdev=1
    ```
  * Add `nvidia-booster.service` to `/etc/systemd/system` as a temporary mitigation of GSP issue
