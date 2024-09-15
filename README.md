@@ -6,7 +6,7 @@
  * Edit `/etc/pacman.conf` to enable colors, parallel downloads and `multilib` repo
  * Install `yay`: https://github.com/Jguer/yay
  * Packages: `yay -S --needed kdialog spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils tuned tuned-ppd alacritty neovim okular kdegraphics-mobipocket unrar ripgrep fd bluez bluez-utils realtime-privileges`
- * Enable Bluetooth with `sudo systemctl enable bluetooth.service`
+ * Enable Bluetooth with `sudo systemctl enable --now bluetooth.service`
  * Enable `spoofdpi` with `sudo systemctl enable --now spoofdpi.service` and add `--proxy-server=http://127.0.0.1:8080` to Chromium-based browsers
  * Auto-mount windows partition if any
  * Install Git Credential Manager: https://github.com/git-ecosystem/git-credential-manager
@@ -46,7 +46,7 @@
    options nvidia_drm fbdev=1
    ```
  * Add `nvidia-boost.service` to `/etc/systemd/system` as a temporary mitigation of GSP issue
- * Enable services: `sudo systemctl enable nvidia-{suspend,resume,hibernate,powerd,persistenced,boost}`
+ * Enable services: `sudo systemctl enable --now nvidia-{suspend,resume,hibernate,powerd,persistenced,boost}`
 
 # Wine
  * Install: `yay -S wine wine-mono winetricks`
@@ -57,8 +57,9 @@
  * It's possible to use NTFS partition for game library
  * In that case move `compatdata` to Linux fs and symlink it with NTFS library
 
-# Audio
+# Pro Audio
  * Use `rtcqs` to check audio performance
+ * `rtirq` for RT or `threadirqs` enabled kernels: install with `yay -S rtirq` and run with `sudo systemctl enable --now rtirq`
  * Install audio DAW and plugins: `yay -S sws reaper reapack lsp-plugins-clap zam-plugins-clap surge-xt-clap ot-urchin-clap ot-cryptid-clap ob-xd-lv2 js80p jc303-clap dragonfly-reverb-clap cardinal-clap dexed-clap`
  * Reaper setup: edit `ui_scale=*` in `~/.config/REAPER/reaper.ini` and manually add `/usr/lib/vst3/` to VST path
 
@@ -74,7 +75,7 @@
  * This seems essential as this mouse prevents PC from sleeping properly unless the driver is installed
  * AUR: `yay -S logiops`
  * Copy `logid.conf` to `/etc/logid.conf`
- * `sudo systemctl enable logid`
+ * `sudo systemctl enable --now logid`
 
 # RME Babyface Pro
  * Use Pro Audio profile
