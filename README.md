@@ -45,7 +45,7 @@
    options nvidia_drm modeset=1
    options nvidia_drm fbdev=1
    ```
- * Add `nvidia-booster.service` to `/etc/systemd/system` as a temporary mitigation of GSP issue
+ * Add `nvidia-boost.service` to `/etc/systemd/system` as a temporary mitigation of GSP issue
  * Enable services: `sudo systemctl enable nvidia-{suspend,resume,hibernate,powerd,persistenced,boost}`
 
 # Wine
