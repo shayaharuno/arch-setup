@@ -15,7 +15,7 @@
 # GRUB
  * Uncommenting `GRUB_TERMINAL_OUTPUT=console` in `/etc/default/grub` fixes slow GRUB
  * `GRUB_GFXMODE=1440x900x32,1280x1024x32,auto` makes text larger and fixes slowdowns
- * Boot flags: `quiet splash loglevel=3 systemd.show_status=auto rd.udev.log_level=3 mitigations=off threadirqs preempt=full nohz_full=all nowatchdog`
+ * Boot flags: `quiet splash loglevel=3 systemd.show_status=auto rd.udev.log_level=3 mitigations=off nowatchdog`
  * Apply changes: `grub-mkconfig -o /boot/grub/grub.cfg`
 
 # Environment Variables
@@ -59,6 +59,7 @@
 
 # Pro Audio
  * Use `rtcqs` to check audio performance
+ * Use `linux-rt` kernel or add boot flags: `threadirqs preempt=full nohz_full=all`
  * `rtirq` for RT or `threadirqs` enabled kernels: install with `yay -S rtirq` and run with `sudo systemctl enable --now rtirq`
  * Install audio DAW and plugins: `yay -S sws reaper reapack lsp-plugins-clap zam-plugins-clap surge-xt-clap ot-urchin-clap ot-cryptid-clap ob-xd-lv2 js80p jc303-clap dragonfly-reverb-clap cardinal-clap dexed-clap`
  * Reaper setup: edit `ui_scale=*` in `~/.config/REAPER/reaper.ini` and manually add `/usr/lib/vst3/` to VST path
