@@ -34,18 +34,16 @@
  * Best option is `nvidia-dkms` package (works with any kernel)
  * `nvidia-open-dkms` currently has performance issues
  * Video acceleration: `yay -S libvdpau libva-nvidia-driver`
- * For Wayland to work: `nvidia_drm.modeset=1`
- * Disable GSP until fixed: `nvidia.NVreg_EnableGpuFirmware=0` (only works with closed source kernel module)
- * Enable NVIDIA hibernate/resume/suspend daemons and add `nvidia.NVreg_PreserveVideoMemoryAllocations=1`
- * All of the above may be added to `/etc/modprobe.d/nvidia.conf`
+ * Create `/etc/modprobe.d/nvidia.conf`:
    ```
-   options nvidia NVreg_PreserveVideoMemoryAllocations=1
-   options nvidia NVreg_TemporaryFilePath=/var/tmp
-   options nvidia NVreg_EnableGpuFirmware=0
-   options nvidia_drm modeset=1
+   options nvidia NVreg_PreserveVideoMemoryAllocations=1 # Suspend fix
+   options nvidia NVreg_TemporaryFilePath=/var/tmp # Suspend fix
+   options nvidia NVreg_EnableGpuFirmware=1 # Setting it to 0 might help with slowdowns, setting it to 1 only works for 2000+ cards
+   options nvidia_drm modeset=1 # Wayland fix
    options nvidia_drm fbdev=1
    ```
  * Add `nvidia-booster.service` to `/etc/systemd/system` as a temporary mitigation of GSP issue
+ * Enable services: `sudo systemctl enable nvidia-{suspend,resume,hibernate,powerd,persistenced,boost}`
 
 # Wine
  * Install: `yay -S wine wine-mono winetricks`
