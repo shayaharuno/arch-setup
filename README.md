@@ -6,6 +6,7 @@
  * Edit `/etc/pacman.conf` to enable colors, parallel downloads and `multilib` repo
  * Install `yay`: https://github.com/Jguer/yay
  * Packages: `yay -S --needed kdialog spoofdpi-bin partitionmanager gwenview kcalc mpv qtcreator coppwr-bin blender krita obs-studio steam qbittorrent equibop element-desktop telegram-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd p7zip kfind filelight fastfetch spectacle cmake ninja unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils tuned tuned-ppd alacritty neovim okular kdegraphics-mobipocket unrar ripgrep fd bluez bluez-utils realtime-privileges`
+ * Enable Tuned with `sudo systemctl enable --now tuned` and `sudo systemctl enable --now tuned-ppd`
  * Enable Bluetooth with `sudo systemctl enable --now bluetooth.service`
  * Enable `spoofdpi` with `sudo systemctl enable --now spoofdpi.service` and add `--proxy-server=http://127.0.0.1:8080` to Chromium-based browsers
  * Auto-mount windows partition if any
@@ -32,8 +33,8 @@
 
 # NVIDIA Graphics
  * For 2000+ series cards install `nvidia-open-dkms`, otherwise use `nvidia-dkms`
- * In case of poor performance add `nvidia-boost.service` to `/etc/systemd/system` and enable it `sudo systemctl enable --now nvidia-boost`
  * Enable suspend and other services: `sudo systemctl enable --now nvidia-{suspend,resume,hibernate,powerd,persistenced}`
+ * In case of poor performance add `nvidia-boost.service` to `/etc/systemd/system` and enable it `sudo systemctl enable --now nvidia-boost`
  * Video acceleration: `yay -S libvdpau libva-nvidia-driver`
 <details>
   <summary>Some kernel flags that might be useful</summary>
