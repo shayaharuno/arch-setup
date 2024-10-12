@@ -31,11 +31,16 @@
  * Video acceleration: `yay -S intel-media-driver onevpl-intel-gpu libva-utils`
 
 # NVIDIA Graphics
- * Best option is `nvidia-dkms` package (works with any kernel)
- * `nvidia-open-dkms` currently has performance issues
+ * For 2000+ series cards install `nvidia-open-dkms`, otherwise use `nvidia-dkms`
+ * In case of poor performance add `nvidia-boost.service` to `/etc/systemd/system` and enable it `sudo systemctl enable --now nvidia-boost`
+ * Enable suspend and other services: `sudo systemctl enable --now nvidia-{suspend,resume,hibernate,powerd,persistenced}`
  * Video acceleration: `yay -S libvdpau libva-nvidia-driver`
- * Create `/etc/modprobe.d/nvidia.conf`:
-   ```
+<details>
+  <summary>Some kernel flags that might be useful</summary>
+
+   Add these to `/etc/modprobe.d/nvidia.conf`
+
+```
    # Suspend fix
    options nvidia NVreg_PreserveVideoMemoryAllocations=1
    options nvidia NVreg_TemporaryFilePath=/var/tmp
@@ -44,9 +49,9 @@
    # Wayland fix
    options nvidia_drm modeset=1
    options nvidia_drm fbdev=1
-   ```
- * Add `nvidia-boost.service` to `/etc/systemd/system` as a temporary mitigation of GSP issue
- * Enable services: `sudo systemctl enable --now nvidia-{suspend,resume,hibernate,powerd,persistenced,boost}`
+```
+
+</details>
 
 # Wine
  * Install: `yay -S wine wine-mono winetricks`
