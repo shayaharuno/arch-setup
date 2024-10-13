@@ -1,7 +1,6 @@
 [Unit]
-Description=Set memory/graphics clocks on a NVIDIA card
-Wants=graphical.target
-After=graphical.target
+Description=NVIDIA Boost
+After=multi-user.target
 ConditionPathExists=/usr/bin/nvidia-smi
 
 [Service]
@@ -12,4 +11,4 @@ ExecStart=/usr/bin/nvidia-smi -lmc 7001
 ExecStart=/usr/bin/nvidia-smi -lgc 405,1785
 
 [Install]
-WantedBy=graphical.target
+WantedBy=multi-user.target
