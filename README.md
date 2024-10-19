@@ -34,7 +34,7 @@
 
 # NVIDIA Graphics
  * For 2000+ series cards install `nvidia-open-dkms`, otherwise use `nvidia-dkms`
- * Enable suspend and other services: `sudo systemctl enable --now nvidia-{suspend,resume,hibernate,powerd,persistenced}`
+ * Enable suspend and other services: `sudo systemctl enable nvidia-{suspend,resume,hibernate,powerd,persistenced}`
  * In case of poor performance add `nvidia-boost.service` to `/etc/systemd/system` and enable it `sudo systemctl enable --now nvidia-boost`. Adjust clocks in `nvidia-boost.service` based on output of `nvidia-smi -q -d SUPPORTED_CLOCKS` if needed.
  * Enable HDR: `export KWIN_DRM_ALLOW_NVIDIA_COLORSPACE=1` in `/etc/environment/`
  * Video acceleration: `yay -S libvdpau libva-nvidia-driver`
