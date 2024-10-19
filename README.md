@@ -7,7 +7,7 @@
  * Edit `/etc/pacman.conf` to enable colors, parallel downloads and `multilib` repo
  * Install `yay`: https://github.com/Jguer/yay
  * Packages: `yay -S --needed kdialog partitionmanager gwenview kcalc mpv blender krita steam qbittorrent telegram-desktop brave-bin p7zip kfind filelight spectacle unzip wl-clipboard ntfs-3g fuse2 fuse3 alsa-utils tuned tuned-ppd okular kdegraphics-mobipocket unrar ripgrep fd flatpak fwupd`
- * More packages: `yay -S --needed spoofdpi-bin qtcreator coppwr-bin obs-studio equibop-bin element-desktop brave-bin ttf-iosevka-nerd ttf-iosevkaterm-nerd fastfetch cmake ninja alacritty neovim bluez bluez-utils realtime-privileges ttf-vlgothic`
+ * More packages: `yay -S --needed neovim alacritty zsh godot vesktop-bin visual-studio-code-bin ttf-jetbrains-mono-nerd ttf-mplus-nerd fastfetch obsidian telegram-desktop qbittorrent obs-studio zen-browser-bin`
  * Enable Tuned with `sudo systemctl enable --now tuned` and `sudo systemctl enable --now tuned-ppd`
  * Enable Bluetooth with `sudo systemctl enable --now bluetooth.service`
  * Enable `spoofdpi` with `sudo systemctl enable --now spoofdpi.service` and add `--proxy-server=http://127.0.0.1:8080` to Chromium-based browsers
